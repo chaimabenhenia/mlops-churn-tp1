@@ -30,3 +30,22 @@ une autre machine ?
 En partie — le code (Git), les paramètres et les versions de
 bibliothèques (requirements.txt du run) sont connus ; reste le
 problème de l'environnement identique : Docker (TP5-6)
+
+TP4
+Comment désigner officiellement le
+modèle à utiliser ?
+
+Avec l'alias champion : models:/churn-model@champion pointe vers la
+version choisie, et on peut le déplacer en une ligne
+
+Comment une application peut-elle
+utiliser le modèle ?
+
+Par une requête web à l'API : POST /predict avec un JSON, la réponse
+contient la prédiction
+
+Que se passe-t-il quand on change de
+champion ?
+
+On déplace l'alias et on redémarre l'API : le code de l'API et des
+applications clientes ne change pas
